@@ -2,7 +2,7 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif; /* Define a fonte principal para Arial, com uma fonte de fallback em sans-serif caso Arial não esteja disponível. */
     text-align: center; /* Centraliza o texto no corpo da página. */
-    background-color: #688a75; /* Define a cor de fundo como um tom de cinza claro. */
+    background-color: #688a75; /* Define a cor de fundo como um tom de verde claro. */
 }
 
 /* Estiliza o contêiner do tabuleiro */

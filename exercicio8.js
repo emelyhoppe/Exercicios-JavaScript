@@ -40,6 +40,7 @@ function handleCellClick(index) {
         message.textContent = `Vez do Jogador ${jogadorAtual}`; // Exibe a mensagem de vez do jogador.
     }
 }
+// Adiciona Imagens no lugar do jogador "x" e "o"
     const jogadorImagens = {
         'Velha': 'aa.png',
         'Velho': 'bb.png',
