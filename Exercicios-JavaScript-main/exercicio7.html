@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página HTML com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-image: url(https://png.pngtree.com/png-clipart/20220207/ourlarge/pngtree-st-patricks-day-green-gnome-cartoon-png-image_4382222.png);
+        }
+
+        h1,h2 {
+            color: #333;
+            background-color: white;
+           
+        }
+
+        label {
+            font-weight: bold;
+            background-color: white;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+        
+
+
+        button {
+            background-color: #1ab32e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+            background-color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        li {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Você tem visto os anões verdes?</h1>
+
+    <label for="nome">Digite quantos anões verdes você vê em sua frente:</label>
+    <input type="text" id="nome" placeholder="Só 1?">
+    <button id="meuBotao">Clique-me!</button>
+    <button id="limparBotao">Limpar</button>
+
+    <p id="minhaMensagem"></p>
+
+    <h2>Quantidade de anões já vistos por vocês:</h2>
+    <ul id="nomesDigitados"></ul>
+
+    <script>
+        document.getElementById("meuBotao").addEventListener("click", function () {
+            const nome = document.getElementById("nome").value;
+
+            // Verifica se um nome foi digitado (não está vazio)
+            if (nome) {
+                // Se um nome foi digitado, exibe uma saudação personalizada na área "minhaMensagem"
+                document.getElementById("minhaMensagem").innerHTML = "Você viu: " + nome + " anões!";
+
+                // Obtém a lista de nomes digitados com o id "nomesDigitados"
+                const listaNomes = document.getElementById("nomesDigitados");
+
+                // Cria um elemento de lista (li) para o nome digitado
+                const li = document.createElement("li");
+
+                // Adiciona o nome digitado como texto ao elemento li
+                li.appendChild(document.createTextNode(nome));
+
+                // Adiciona o elemento li à lista de nomes digitados
+                listaNomes.appendChild(li);
+            } else {
+                // Se nenhum nome foi digitado, exibe uma mensagem de solicitação no elemento "minhaMensagem"
+                document.getElementById("minhaMensagem").innerHTML = "Você anda vendo anões de outras cores?";
+            }
+        });
+
+        // Adiciona um ouvinte de evento ao botão com o id "limparBotao" quando ele é clicado
+        document.getElementById("limparBotao").addEventListener("click", function () {
+            // Limpa o campo de entrada com o id "nome"
+            document.getElementById("nome").value = "";
+
+            // Limpa a mensagem exibida no elemento "minhaMensagem"
+            document.getElementById("minhaMensagem").innerHTML = "";
+
+            // Limpa a lista de nomes digitados no elemento "nomesDigitados"
+            document.getElementById("nomesDigitados").innerHTML = "";
+        });
+
+    </script>
+</body>
+
+</html>

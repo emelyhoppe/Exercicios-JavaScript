@@ -13,7 +13,7 @@ verificarBotao.addEventListener("click", function () {
 const tentativa = parseInt(tentativaEntrada.value);
 
 if (tentativa === numeroSecreto) {
-dica.textContent = `Parabéns! Voce acertou em ${qtdTentativas} tentaivas. `;
+dica.textContent = 'Parabéns! Voce acertou em ${qtdtentativas} tentaivas. ';
 verificarBotao.disabled = true;
 }
 else if (tentativa < numeroSecreto) {
@@ -29,4 +29,3 @@ qtdTentativas++;
 
 
 });
-console.log(numeroSecreto.value)
